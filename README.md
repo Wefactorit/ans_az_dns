@@ -30,6 +30,12 @@ You can use this playbook by modify variables as you need. And tun the command b
 ```bash
 ansible-playbook -i tests/inventory tests/main.yml
 ```
+
+If you want to delete the ZONE just run:
+
+```bash
+ansible-playbook -i tests/inventory tests/main.yml -e"state=absent"
+```
  Note that you can create more than one at once by duplicate the domain name block from defaults variables like this:
 ```bash
  domain_definitions:
@@ -42,7 +48,6 @@ ansible-playbook -i tests/inventory tests/main.yml
 ```
 
 In this examples you'll create two DNS zones.
-![Image description](img/mytemplate.png)
 
 
 ## Variables
