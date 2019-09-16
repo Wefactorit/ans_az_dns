@@ -1,0 +1,9 @@
+- name: Create the dns zone
+  azure_rm_dnszone:
+    resource_group: "{{ item.resource_group }}"
+    name: "{{ item.domain_name }}"
+    state: present
+    type: "{{item.type}}"
+  with_items: "{{ domain_definitions }}"
+  tags:
+    - dns

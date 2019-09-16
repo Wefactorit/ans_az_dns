@@ -1,0 +1,6 @@
+state: present
+domain_definitions:
+  - domain_name: domain_name
+    resource_group: resource_group
+    state: present
+    type: private
