@@ -2,7 +2,7 @@
   azure_rm_dnszone:
     resource_group: "{{ item.resource_group }}"
     name: "{{ item.domain_name }}"
-    state: present
+    state: "{{ state }}"
     type: "{{item.type}}"
   with_items: "{{ domain_definitions }}"
   tags:

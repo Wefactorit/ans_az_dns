@@ -1,3 +1,5 @@
-
-domain_name: new_project.com
-resource_group: new_resource_group
+state: present
+domain_definitions:
+  - domain_name: test.fr
+    resource_group: saparout-rg
+    type: private

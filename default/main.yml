@@ -1,6 +1,8 @@
 state: present
 domain_definitions:
-  - domain_name: domain_name
+  - domain_name: domain01.com
     resource_group: resource_group
-    state: present
+    type: private
+  - domain_name: domain02.com
+    resource_group: resource_group
     type: private
