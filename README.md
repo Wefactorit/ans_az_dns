@@ -27,17 +27,18 @@ First, make sur you have [Ansible](https://www.ansible.com/)  and [azcli](https:
 
 
 You can use this playbook by modify variables as you need. And tun the command below to provision your DNS zone:
-```bash
+```
 ansible-playbook -i tests/inventory tests/main.yml
 ```
 
 If you want to delete the ZONE just run:
 
-```bash
+```
 ansible-playbook -i tests/inventory tests/main.yml -e"state=absent"
 ```
  Note that you can create more than one at once by duplicate the domain name block from defaults variables like this:
-```bash
+
+```
  domain_definitions:
    - domain_name: domain01.com
      resource_group: resource_group
